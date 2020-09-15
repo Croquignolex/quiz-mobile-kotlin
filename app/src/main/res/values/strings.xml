@@ -7,7 +7,7 @@
         </a>
     </string>
 
-    <string name="welcome">Bienvenu</string>
+    <string name="welcome">Bienvenue</string>
     <string name="please_enter_your_name">Entrez voutre nom SVP</string>
     <string name="name_hint">Exemple: Alex</string>
     <string name="submit">Valider</string>
