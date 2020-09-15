@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Quiz</string>
+    <string name="default_image_alt">…</string>
+    <string name="developer_name" style="text-decoration:none">
+        <a href="https://croquignolex-tikiton.dmsemergence.com/">
+            By Croquignolex Tikiton
+        </a>
+    </string>
 </resources>
