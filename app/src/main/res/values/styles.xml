@@ -9,6 +9,7 @@
 
     <!-- Custom theme to avoid top action bar -->
     <style name="AppTheme.RemoveActionBar">
+        <!--Remove title bar-->
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
     </style>

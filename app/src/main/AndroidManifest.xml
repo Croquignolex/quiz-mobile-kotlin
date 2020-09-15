@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.tikiton.quiz">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tikiton.quiz">
 
     <application
         android:allowBackup="true"
@@ -8,21 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Playground"></activity>
         <!-- Remove top action bar into main activity -->
         <activity
             android:name=".SplashScreen"
-            android:theme="@style/AppTheme.RemoveActionBar">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.RemoveActionBar"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- Remove top action bar into main activity -->
+        </activity> <!-- Remove top action bar into main activity -->
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.RemoveActionBar">
-        </activity>
+            android:theme="@style/AppTheme.RemoveActionBar"></activity>
     </application>
 
 </manifest>

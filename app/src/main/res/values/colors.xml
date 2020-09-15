@@ -4,11 +4,11 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="colorTheme">#7654B3</color>
-    <color name="colorThemeDark">#673AB7</color>
-    <color name="colorSecondary">#717CBA</color>
+    <color name="colorTheme">#00BCD4</color>
+    <color name="colorThemeDark">#2196F3</color>
+    <color name="colorSecondary">#009688</color>
 
     <color name="colorDark">#373737</color>
-    <color name="colorClair">#EFEFEF</color>
+    <color name="colorClair">#7A7A7A</color>
     <color name="colorWhite">#FFFFFF</color>
 </resources>
