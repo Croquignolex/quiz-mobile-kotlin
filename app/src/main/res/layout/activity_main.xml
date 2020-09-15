@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
-                android:textColor="@color/colorClair"
+                android:textColor="@color/colorLowDark"
                 android:gravity="center"
                 android:textStyle="bold"
                 android:layout_marginBottom="20dp"

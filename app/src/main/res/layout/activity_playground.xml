@@ -1,21 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:padding="10sp"
+    android:background="@color/colorClair"
     android:orientation="vertical"
     tools:context=".Playground">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        android:textSize="30sp"
-        android:textColor="@color/colorThemeDark"
-        tools:layout_editor_absoluteX="188dp"
-        tools:layout_editor_absoluteY="305dp" />
-</LinearLayout>
+        android:paddingVertical="10sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/colorDark" />
+
+        <ImageView
+            android:id="@+id/questionImage"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:contentDescription="@string/default_image_alt" />
+
+        <ProgressBar
+            android:layout_marginTop="30sp"
+            android:id="@+id/progressBar"
+            android:paddingHorizontal="15sp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15sp">
+
+            <TextView
+                android:id="@+id/choiceOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:padding="15sp"
+                android:layout_marginTop="15sp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorDark" />
+
+            <TextView
+                android:id="@+id/choiceTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:padding="15sp"
+                android:layout_marginTop="15sp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorDark" />
+
+            <TextView
+                android:id="@+id/choiceTree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:padding="15sp"
+                android:layout_marginTop="15sp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorDark" />
+
+            <TextView
+                android:id="@+id/choiceFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:padding="15sp"
+                android:layout_marginTop="15sp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorDark" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:padding="20sp"
+            android:layout_margin="15sp"
+            android:textColor="@color/colorWhite"
+            android:backgroundTint="@color/colorThemeDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit" />
+
+    </LinearLayout>
+
+</ScrollView>

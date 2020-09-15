@@ -9,6 +9,7 @@
     <color name="colorSecondary">#009688</color>
 
     <color name="colorDark">#373737</color>
-    <color name="colorClair">#7A7A7A</color>
+    <color name="colorLowDark">#8C8C8C</color>
+    <color name="colorClair">#DADADA</color>
     <color name="colorWhite">#FFFFFF</color>
 </resources>
