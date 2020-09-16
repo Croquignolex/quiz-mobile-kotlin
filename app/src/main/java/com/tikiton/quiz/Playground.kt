@@ -3,8 +3,9 @@ package com.tikiton.quiz
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import android.graphics.Color
 import android.widget.Button
+import android.graphics.Color
+import android.content.Intent
 import android.widget.TextView
 import com.tikiton.quiz.data.QuestionDAO
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_playground.*
 
 class Playground : AppCompatActivity() {
     private var choiceIndex: Int = 0
+    private var waitingForNext = false
     private var failedQuestions: Int = 0
     private var passedQuestions: Int = 0
     private var backPressedTime: Long = 0
@@ -23,7 +25,7 @@ class Playground : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_playground)
 
-        val userName = intent.getStringExtra("UserName")
+        val userName = intent.getStringExtra("userName")
 
         setQuestionOnUI()
 
@@ -35,6 +37,7 @@ class Playground : AppCompatActivity() {
             } else passedQuestions += 1
             highlightAnswer()
             // Hide submit button & show next button
+            waitingForNext = true
             it.visibility = Button.INVISIBLE
             nextButton.visibility = Button.VISIBLE
         }
@@ -42,12 +45,18 @@ class Playground : AppCompatActivity() {
         nextButton.setOnClickListener {
             // End game or next question
             if((currentQuestionIndex + 1) == questions.size) {
-                // TODO end game
+                val resultBoardIntent = Intent(this, ResultBoard::class.java);
+                resultBoardIntent.putExtra("userName", userName)
+                resultBoardIntent.putExtra("failedQuestions", failedQuestions.toString())
+                resultBoardIntent.putExtra("passedQuestions", passedQuestions.toString())
+                startActivity(resultBoardIntent)
+                finish()
             } else {
                 currentQuestionIndex += 1
                 currentQuestion = questions[currentQuestionIndex]
                 setQuestionOnUI()
             }
+            waitingForNext = false
             it.visibility = Button.INVISIBLE
             submitButton.visibility = Button.VISIBLE
         }
@@ -55,9 +64,11 @@ class Playground : AppCompatActivity() {
 
     // Highlight selected choice
     fun onSelectChoice(view: View) {
-        val choiceView = (view as TextView)
-        choiceIndex = currentQuestion.choices.indexOf(choiceView.text.toString())
-        highlightChoice(choiceView)
+        if(!waitingForNext) {
+            val choiceView = (view as TextView)
+            choiceIndex = currentQuestion.choices.indexOf(choiceView.text.toString())
+            highlightChoice(choiceView)
+        }
     }
 
     // Highlight correct answer

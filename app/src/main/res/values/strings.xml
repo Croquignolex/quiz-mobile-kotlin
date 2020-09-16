@@ -12,4 +12,6 @@
     <string name="name_hint">Exemple: Alex</string>
     <string name="submit">Valider</string>
     <string name="next">Suivant</string>
+    <string name="well_done">Bravo</string>
+    <string name="play_again">Jouer à nouveau</string>
 </resources>

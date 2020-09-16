@@ -12,4 +12,7 @@
     <color name="colorLowDark">#8C8C8C</color>
     <color name="colorClair">#DADADA</color>
     <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorSuccess">#009688</color>
+    <color name="colorDanger">#E91E63</color>
 </resources>
