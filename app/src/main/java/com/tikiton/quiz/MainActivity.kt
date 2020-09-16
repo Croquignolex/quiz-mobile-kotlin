@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
             val nameFieldValue = nameField.text.toString()
             if(nameFieldValue.length >= 2) {
                 val playgroundIntent = Intent(this, Playground::class.java);
+                playgroundIntent.putExtra("UserName", nameFieldValue)
                 startActivity(playgroundIntent)
                 finish()
             } else Toast.makeText(this, "Votre nom doit avoir au moins 2 caratères", Toast.LENGTH_LONG).show()

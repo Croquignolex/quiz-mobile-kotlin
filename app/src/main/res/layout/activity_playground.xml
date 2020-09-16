@@ -45,7 +45,7 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="0dp"
                 android:layout_weight="6"
-                android:max="10"
+                android:max="8"
                 android:layout_gravity="center"
                 android:progress="0"
                 android:indeterminate="false"
@@ -76,6 +76,7 @@
                 android:textSize="15sp"
                 android:gravity="center"
                 android:padding="15sp"
+                android:onClick="onSelectChoice"
                 android:layout_marginTop="15sp"
                 android:background="@color/colorWhite"
                 android:textColor="@color/colorDark" />
@@ -86,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:gravity="center"
+                android:onClick="onSelectChoice"
                 android:padding="15sp"
                 android:layout_marginTop="15sp"
                 android:background="@color/colorWhite"
@@ -97,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:gravity="center"
+                android:onClick="onSelectChoice"
                 android:padding="15sp"
                 android:layout_marginTop="15sp"
                 android:background="@color/colorWhite"
@@ -109,21 +112,39 @@
                 android:textSize="15sp"
                 android:gravity="center"
                 android:padding="15sp"
+                android:onClick="onSelectChoice"
                 android:layout_marginTop="15sp"
                 android:background="@color/colorWhite"
                 android:textColor="@color/colorDark" />
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/submitButton"
-            android:padding="20sp"
-            android:layout_margin="15sp"
-            android:textColor="@color/colorWhite"
-            android:backgroundTint="@color/colorThemeDark"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/submit" />
+            android:paddingHorizontal="15sp">
+
+            <Button
+                android:id="@+id/submitButton"
+                android:padding="20sp"
+                android:layout_margin="15sp"
+                android:textColor="@color/colorWhite"
+                android:backgroundTint="@color/colorThemeDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/submit" />
+
+            <Button
+                android:visibility="invisible"
+                android:id="@+id/nextButton"
+                android:padding="20sp"
+                android:layout_margin="15sp"
+                android:textColor="@color/colorWhite"
+                android:backgroundTint="@color/colorSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/next" />
+        </RelativeLayout>
 
     </LinearLayout>
 
